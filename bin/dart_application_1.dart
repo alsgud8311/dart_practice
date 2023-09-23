@@ -2,7 +2,7 @@ import 'package:dart_application_1/dart_application_1.dart'
     as dart_application_1;
 
 class Player {
-  final String name;
+  String name;
   int xp;
   String team;
 
@@ -23,26 +23,9 @@ class Player {
 }
 
 void main() {
-  var apiData = [
-    {
-      "name": 'minhyung',
-      "team": 'red',
-      'xp': 0,
-    },
-    {
-      "name": 'minsu',
-      "team": 'red',
-      'xp': 0,
-    },
-    {
-      "name": 'suiiiii',
-      "team": 'red',
-      'xp': 0,
-    }
-  ];
-
-  apiData.forEach((playerJson) {
-    var player = Player.fromJson(playerJson);
-    player.sayHello();
-  });
+  var minsu = Player(name: 'minsu', xp: 1200, team: 'red')
+    ..name = 'als'
+    ..xp = 12214124
+    ..team = 'blue'
+    ..sayHello();
 }
