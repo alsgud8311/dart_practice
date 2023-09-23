@@ -1,18 +1,17 @@
 import 'package:dart_application_1/dart_application_1.dart'
     as dart_application_1;
 
-typedef ListOfInts = List<int>;
-typedef UserInfo = Map<String, String>;
+class Player {
+  final String name = 'minhyung';
+  int xp = 1500;
 
-ListOfInts reverseListOfNumbers(List<int> list) {
-  var reversed = list.reversed;
-  return reversed.toList();
-}
-
-String sayHi(Map<String,String> userInfo){
-  return "hi ${userInfo['name']}"
+  void sayHello() {
+    print("hi my name is $name");
+  }
 }
 
 void main() {
-  print(reverseListOfNumbers([1, 2, 3, 4, 5]));
+  var player = new Player();
+  print(player.name);
+  player.sayHello();
 }
