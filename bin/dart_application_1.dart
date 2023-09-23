@@ -3,6 +3,21 @@ import 'package:dart_application_1/dart_application_1.dart'
 
 bool isEmpty(String string) => string.length == 0;
 void main() {
-  const name = "mh";
-  name = 12;
+  var give = true;
+  var numbers = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    if (give) 124214,
+  ];
+  List<int> nums = [
+    1,
+    3,
+    6,
+    8,
+  ];
+  nums.add(29);
+  print(numbers);
 }
