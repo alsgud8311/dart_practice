@@ -1,10 +1,18 @@
 import 'package:dart_application_1/dart_application_1.dart'
     as dart_application_1;
 
-class Player {
+abstract class Human {
+  void walk();
+}
+
+enum Team { red, blue }
+
+enum XPLevel { beginner, medium, pro }
+
+class Player extends Human{
   String name;
-  int xp;
-  String team;
+  XPLevel xp;
+  Team team;
 
   Player({
     required this.name,
@@ -20,12 +28,18 @@ class Player {
   void sayHello() {
     print("hi my name is $name");
   }
+
+  void walk(){
+    print('walking...')
+  }
+}
+
+class Coach extends Human {
+  void walk(){
+    print('walking coach')
+  }
 }
 
 void main() {
-  var minsu = Player(name: 'minsu', xp: 1200, team: 'red')
-    ..name = 'als'
-    ..xp = 12214124
-    ..team = 'blue'
-    ..sayHello();
+
 }
