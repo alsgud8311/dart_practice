@@ -1,19 +1,18 @@
 import 'package:dart_application_1/dart_application_1.dart'
     as dart_application_1;
 
-void sayHello(String name) {
-  print("Hello $name. nice to meet you");
+String sayHello({
+  required String name,
+  required int age,
+  required String country,
+}) {
+  return "Hello $name. you are $age and you come from $country.";
 }
-
-String sayHelloname(String name) {
-  return "Hello $name. nice to meet you";
-}
-
-String fatArrow(String name) => "Hello $name. nice to meet you";
 
 void main() {
-  var name = 'minsu';
-  sayHello(name);
-  print(sayHelloname('minhyung'));
-  print(fatArrow('byeongju'));
+  print(sayHello(
+    name: 'minsu',
+    age: 12,
+    country: 'cheongju',
+  ));
 }
